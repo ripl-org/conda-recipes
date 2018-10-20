@@ -2,16 +2,23 @@ FROM centos:6
 LABEL maintainer "Mark Howison <mhowison@ripl.org>"
 LABEL repository riplorg
 LABEL image conda-build
-LABEL tag 20181019
+LABEL tag 20181020
 
 RUN yum update -y
 RUN yum install -y \
+  fuse-devel \
+  libX11-devel \
+  libXext-devel \
+  libXrender-devel \
+  java-1.8.0-openjdk-headless \
+  java-1.8.0-openjdk-devel \
   patch \
   sudo \
   tree \
   unzip \
   wget \
   which \
+  xcb-util-renderutil-devel \
   zip
 
 RUN yum clean all
