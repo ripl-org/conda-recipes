@@ -1,0 +1,21 @@
+package:
+  name: parallel
+  version: 20180922
+
+source:
+  url: http://ftp.gnu.org/gnu/parallel/parallel-20180922.tar.bz2
+  sha256: ea078ef0e0528c9b5d1c60bf6cf8454ce7586521982c677a450e0baff8a7071f
+
+requirements:
+  run:
+    - perl
+
+test:
+  commands:
+    - parallel --version
+
+about:
+  home: http://www.gnu.org/software/parallel/
+  summary: GNU parallel is a shell tool for executing jobs in parallel using one or more computers
+  license: GPLv3
+  license_file: COPYING
