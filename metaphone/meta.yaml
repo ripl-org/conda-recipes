@@ -1,0 +1,29 @@
+package:
+  name: metaphone
+  version: 0.6
+
+source:
+  url: https://files.pythonhosted.org/packages/d4/ae/c9e4d007e32a6469be212da11d0b8e104d643f6f247d771742caf6ac6bb8/Metaphone-0.6.tar.gz
+  sha256: ad0beadca66cb7ec6ede71ef72bb02da097c493ddf159930d6340bc83f53da27
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - metaphone
+    - metaphone.tests
+
+about:
+  home: https://github.com/oubiwann/metaphone
+  summary: A Python implementation of the metaphone and double metaphone algorithms.
+  license: BSD
+  license_file: LICENSE
