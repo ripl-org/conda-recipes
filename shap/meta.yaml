@@ -1,0 +1,50 @@
+package:
+  name: shap
+  version: 0.29.2
+
+source:
+  git_url: https://github.com/slundberg/shap
+  git_tag: 0.29.2
+
+build:
+  script: python setup.py install --single-version-externally-managed --record record.txt
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - setuptools
+    - ipython
+    - matplotlib
+    - pandas
+    - scikit-learn
+    - scikit-image
+    - scipy
+    - tqdm
+  run:
+    - python
+    - setuptools
+    - ipython
+    - matplotlib
+    - pandas
+    - scikit-learn
+    - scikit-image
+    - scipy
+    - tqdm
+
+test:
+  imports:
+    - shap
+    - shap.explainers
+    - shap.explainers.other
+    - shap.explainers.deep
+    - shap.plots
+    - shap.benchmark
+
+about:
+  home: https://github.com/slundberg/shap
+  license: MIT
+  license_file: LICENSE
+  summary: A unified approach to explain the output of any machine learning model
