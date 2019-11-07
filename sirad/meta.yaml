@@ -1,10 +1,10 @@
 package:
   name: sirad
-  version: 0.2.1
+  version: 0.3.0
 
 source:
   git_url: https://github.com/ripl-org/sirad
-  git_tag: v0.2.1
+  git_tag: v0.3.0
 
 build:
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -16,12 +16,14 @@ requirements:
     - openpyxl
     - pandas
     - pyyaml
+    - usaddress
   run:
     - python
     - setuptools
     - openpyxl
     - pandas
     - pyyaml
+    - usaddress
 
 test:
   commands:
