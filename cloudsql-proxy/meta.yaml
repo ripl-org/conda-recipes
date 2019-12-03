@@ -1,0 +1,17 @@
+package:
+  name: cloudsql-proxy
+  version: 1.16
+
+source:
+  url: https://storage.googleapis.com/cloudsql-proxy/v1.16/cloud_sql_proxy.linux.amd64
+  sha256: 6e4df1e2b62e41b3c01818f75dd46a99cb0e9d385c3b6237281251e28cb38432
+
+test:
+  commands:
+    - cloud_sql_proxy -version
+
+about:
+  home: https://github.com/GoogleCloudPlatform/cloudsql-proxy
+  summary: Google Cloud SQL proxy client and Go library
+  license_family: APACHE
+  license: Apache License 2.0
